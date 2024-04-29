@@ -2,18 +2,6 @@
 
 A guide for encoding movies for the iPod Video and Classic.
 
-## Supported video formats
-### iPod (5th generation)
-- H.264 video: up to 768 Kbps, **320 x 240**, 30 frames per sec., **Baseline** Profile up to **Level 1.3** with AAC-LC up to 160 Kbps, 48 Khz, stereo audio in .m4v, .mp4 and .mov file formats
-- MPEG-4 video: up to 2.5 mbps, 480 x 480, 30 frames per sec., Simple Profile with AAC-LC up to 160 Kbps, 48 Khz, stereo audio in .m4v, .mp4 and .mov file formats
-
-### iPod Classic (6th generation)
-- H.264 video, up to 1.5 Mbps, 640 by 480 pixels, 30 frames per second, Low-Complexity version of the H.264 Baseline Profile with AAC-LC audio up to 160 Kbps, 48kHz, stereo audio in .m4v, .mp4, and .mov file formats
-- H.264 video, up to 2.5 Mbps, **640 by 480** pixels, 30 frames per second, **Baseline** Profile up to **Level 3.0** with AAC-LC audio up to 160 Kbps, 48kHz, stereo audio in .m4v, .mp4, and .mov file formats
-- MPEG-4 video, up to 2.5 Mbps, 640 by 480 pixels, 30 frames per second, Simple Profile with AAC-LC audio up to 160 Kbps, 48kHz, stereo audio in .m4v, .mp4, and .mov file formats
-
-----
-
 ## Prologue
 I've spent the last three days trying to find a way to properly transcode video for the iPod Classic. First, I tried just using the latest version of Handbrake, but the audio had massive popping and screeching noises, totally unusable. Then I tried encoding using an older version of Handbrake but that is slow and the audio quality was pretty bad, but usable.
 
@@ -50,7 +38,7 @@ Open the new .MKV file we've just created with MKVToolnix in Handbrake, using th
 - **Summary**: Make sure to only enable 'iPod 5G Support' on this page.
 - **Dimensions**:
   - Cropping: None
-  - Resolution Limit: Custom, **320x240** (5th) or **640x480** (6th)
+  - Resolution Limit: Custom, 640x480
   - Anamorphic: None
 - **Video**: You can choose the options you want here, depending on how long you want the encoding process to take and the quality you want to get.
   - Video Encoder: H.264 (prefferably AMD VCE, NVIDIA NVENC or Intel QSV for faster encoding. DO NOT use VCE or NVENC if you want to transcode for the 5th gen iPod. Any of the options should work for the 6th gen iPod Classic.)
@@ -58,7 +46,7 @@ Open the new .MKV file we've just created with MKVToolnix in Handbrake, using th
   - Framerate: Same as source (set this to 30 if the source is higher than 30)
   - Encoder Preset: Slower/Quality
   - Encoder Profile: Baseline
-  - Encoder Level: **1.3** (5th) or **3.0** (6th)
-  - Advanced Options (5th only): `cabac=0:ref=1` for CPU encoding or `coder=cabac:num-ref-frame=1:gop-ref-dist=1:gop-pic-size=30` for QSV encoding.
-- **Audio**: **AAC Passthru** (this is very important)
+  - Encoder Level: 3.0
+  - Advanced Options (5th gen only): `cabac=0:ref=1` for CPU encoding or `coder=cabac:num-ref-frame=1:gop-ref-dist=1:gop-pic-size=30` for QSV encoding.
+- **Audio**: AAC Passthru (this is very important)
 - **Subtitles**: Select the desired track, and check the 'Burn-in' box if you want to display the subtitles in the video itself. This is entirely optional, however. Note that the iPod does not support subtitles natively, so burn-in is the only way.
