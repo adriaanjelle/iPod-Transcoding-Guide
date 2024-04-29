@@ -41,7 +41,7 @@ Open the new .MKV file we've just created with MKVToolnix in Handbrake, using th
   - Resolution Limit: Custom, 640x480
   - Anamorphic: None
 - **Video**: You can choose the options you want here, depending on how long you want the encoding process to take and the quality you want to get.
-  - Video Encoder: H.264 (prefferably AMD VCE, NVIDIA NVENC or Intel QSV for faster encoding. DO NOT use VCE or NVENC if you want to transcode for the 5th gen iPod. Any of the options should work for the 6th gen iPod Classic.)
+  - Video Encoder: H.264 (preferably AMD VCE, NVIDIA NVENC or Intel QSV for faster encoding. DO NOT use VCE or NVENC if you want to transcode for the 5th gen iPod. Any of the options should work for the 6th gen iPod Classic.)
   - Quality: Constant Quality 20 (increase this if you want for higher quality, but it will increase file size)
   - Framerate: Same as source (set this to 30 if the source is higher than 30)
   - Encoder Preset: Slower/Quality
