@@ -59,6 +59,6 @@ Open the new .MKV file we've just created with MKVToolnix in Handbrake, using th
   - Encoder Preset: Slower/Quality
   - Encoder Profile: Baseline
   - Encoder Level: **1.3** (5th) or **3.0** (6th)
-  - Advanced Options (5th only): cabac=0:ref=1 for CPU encoding or coder=cabac:num-ref-frame=1:gop-ref-dist=1:gop-pic-size=30 for QSV encoding.
+  - Advanced Options (5th only): `cabac=0:ref=1` for CPU encoding or `coder=cabac:num-ref-frame=1:gop-ref-dist=1:gop-pic-size=30` for QSV encoding.
 - **Audio**: **AAC Passthru** (this is very important)
 - **Subtitles**: Select the desired track, and check the 'Burn-in' box if you want to display the subtitles in the video itself. This is entirely optional, however. Note that the iPod does not support subtitles natively, so burn-in is the only way.
