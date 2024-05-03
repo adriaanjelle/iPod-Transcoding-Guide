@@ -12,6 +12,9 @@ First, make sure you have [MKVToolnix](https://mkvtoolnix.download/downloads.htm
 
 ![](https://github.com/adriaanjelle/ipod-video-guide/blob/main/Screenshots/Screenshot%202024-04-29%20132654.png)
 
+### What if your source file is anything other than an .MKV file?
+Open the file in MKVToolnix, and keep the video and desired audio track and subtitles. Then let it convert the file to .MKV and start with step 1 :)
+
 ## Step 2: Conversion
 Now, download [foobar2000](https://www.foobar2000.org/download) in 32-bit. This is essential for the DTS plugin to work, which you can download and install [here](https://www.foobar2000.org/components/view/foo_input_dts). Make sure you install the [encoder pack](https://www.foobar2000.org/encoderpack) and [iTunes](https://www.microsoft.com/store/productId/9PB2MZ1ZMB1S?ocid=pdpshare) as well. Once, you're set (just hit 'okay' on everything), drag the .DTS file into foobar, and right click the audio file and go to the converter dialog window.
 
